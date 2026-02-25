@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Simple Me</title>
+</head>
+
+<body align="center">
+
+<br><br><br><br><br><br>
+
+<h1>Simple Me </h1>
+
+<input type="number" id="num1" placeholder="Enter number 1" size="25" style="height:35px; font-size:18px;">
+<br><br>
+
+<input type="number" id="num2" placeholder="Enter number 2" size="25" style="height:35px; font-size:18px;">
+<br><br>
+
+<button onclick="calculate('+')" style="width:50px; height:40px; font-size:18px;">+</button>
+
+<button onclick="calculate('-')" style="width:50px; height:40px; font-size:18px;">-</button>
+
+<button onclick="calculate('*')" style="width:50px; height:40px; font-size:18px;">*</button>
+
+<button onclick="calculate('/')" style="width:50px; height:40px; font-size:18px;">/</button>
+
+<h2 id="result">Result:</h2>
+
+<script>
+
+function calculate(operator){
+
+var num1 = parseFloat(document.getElementById("num1").value);
+var num2 = parseFloat(document.getElementById("num2").value);
+
+var result;
+
+if(operator==='+'){
+result=num1+num2;
+}
+else if(operator==='-'){
+result=num1-num2;
+}
+else if(operator==='*'){
+result=num1*num2;
+}
+else if(operator==='/'){
+result=num1/num2;
+}
+
+document.getElementById("result").innerHTML="Result: "+result;
+
+}
+
+</script>
+
+</body>
+</html>
