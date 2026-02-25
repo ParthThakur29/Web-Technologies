@@ -1,64 +1,55 @@
 body
 {
-    background: linear-gradient(to right, #667eea, #764ba2);
-    font-family: Segoe UI;
-    height: 100vh;
+    background-color: white;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
-.box
+.calculator
 {
-    background: white;
-    padding: 35px;
-    border-radius: 15px;
-    width: 320px;
-    text-align: center;
+    background-color: black;
+    padding: 15px;
+    border-radius: 10px;
 }
 
-h1
+.display input
 {
-    margin-bottom: 5px;
-}
-
-.subtitle
-{
-    font-size: 14px;
-    color: gray;
-    margin-bottom: 20px;
-}
-
-input
-{
-    width: 90%;
-    padding: 10px;
-    margin: 8px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
-
-.btns button
-{
-    padding: 10px 15px;
-    margin: 5px;
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
     border: none;
-    border-radius: 8px;
-    background: #667eea;
+    background-color: black;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.buttons
+{
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    gap: 8px;
+}
+
+button
+{
+    height: 45px;
+    font-size: 16px;
+    border: none;
+    background-color: #1a1a1a;
     color: white;
     cursor: pointer;
-    font-size: 14px;
 }
 
-.btns button:hover
+button:hover
 {
-    background: #5a67d8;
+    background-color: #333;
 }
 
-.result
+.zero
 {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
+    grid-column: span 2;
 }

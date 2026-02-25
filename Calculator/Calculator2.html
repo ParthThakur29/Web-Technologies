@@ -1,42 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Simple Calculator</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="Calculator2.css">
 </head>
 <body>
 
-<div class="box">
-    <h1>Simple Calculator</h1>
-    <p class="subtitle">Enter numbers and choose an operation</p>
+<div class="calculator">
 
-    <input type="number" id="num1" placeholder="First number">
-    <input type="number" id="num2" placeholder="Second number">
-
-    <div class="btns">
-        <button onclick="calc('+')">Add</button>
-        <button onclick="calc('-')">Subtract</button>
-        <button onclick="calc('*')">Multiply</button>
-        <button onclick="calc('/')">Divide</button>
+    <div class="display">
+        <input type="text" id="screen" value="0" readonly>
     </div>
 
-    <div class="result" id="result">Result will appear here</div>
+    <div class="buttons">
+
+        <button onclick="clearScreen()">C</button>
+        <button onclick="deleteOne()">DEL</button>
+        <button onclick="press('/')">/</button>
+        <button onclick="press('*')">*</button>
+
+        <button onclick="press('7')">7</button>
+        <button onclick="press('8')">8</button>
+        <button onclick="press('9')">9</button>
+        <button onclick="press('-')">-</button>
+
+        <button onclick="press('4')">4</button>
+        <button onclick="press('5')">5</button>
+        <button onclick="press('6')">6</button>
+        <button onclick="press('+')">+</button>
+
+        <button onclick="press('1')">1</button>
+        <button onclick="press('2')">2</button>
+        <button onclick="press('3')">3</button>
+        <button onclick="calculate()">=</button>
+
+        <button class="zero" onclick="press('0')">0</button>
+        <button onclick="press('.')">.</button>
+
+    </div>
+
 </div>
 
 <script>
-function calc(op)
+
+let screen = document.getElementById("screen");
+
+function press(value)
 {
-    let a = Number(document.getElementById("num1").value);
-    let b = Number(document.getElementById("num2").value);
-    let answer;
-
-    if(op=='+') answer = a + b;
-    if(op=='-') answer = a - b;
-    if(op=='*') answer = a * b;
-    if(op=='/') answer = b !== 0 ? a / b : "Cannot divide by zero";
-
-    document.getElementById("result").innerHTML = "Result: " + answer;
+    if(screen.value === "0")
+        screen.value = value;
+    else
+        screen.value += value;
 }
+
+function clearScreen()
+{
+    screen.value = "0";
+}
+
+function deleteOne()
+{
+    screen.value = screen.value.slice(0, -1);
+    if(screen.value === "")
+        screen.value = "0";
+}
+
+function calculate()
+{
+    try
+    {
+        screen.value = eval(screen.value);
+    }
+    catch
+    {
+        screen.value = "Error";
+    }
+}
+
 </script>
 
 </body>
