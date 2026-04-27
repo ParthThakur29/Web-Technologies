@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Solver | Simple Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Problem Solver</h1>
+
+        <div class="input-group">
+            <input type="number" id="v1" placeholder="First Number">
+            <input type="number" id="v2" placeholder="Second Number">
+        </div>
+
+        <div class="button-grid">
+            <button onclick="doMath('+')">+</button>
+            <button onclick="doMath('-')">-</button>
+            <button onclick="doMath('*')">×</button>
+            <button onclick="doMath('/')">÷</button>
+        </div>
+
+        <button class="clear-btn" onclick="reset()">Clear All</button>
+
+        <h2 id="out">Final Answer: <span>0</span></h2>
+    </div>
+
+    <script>
+        function doMath(symbol) {
+            let first = parseFloat(document.getElementById("v1").value) || 0;
+            let second = parseFloat(document.getElementById("v2").value) || 0;
+            let ans;
+
+            switch (symbol) {
+                case '+': ans = first + second; break;
+                case '-': ans = first - second; break;
+                case '*': ans = first * second; break;
+                case '/':
+                    ans = second !== 0 ? (first / second).toFixed(2) : "Error (Div by 0)";
+                    break;
+                default: ans = "Unknown";
+            }
+
+            document.getElementById("out").innerHTML = `Final Answer: <span>${ans}</span>`;
+        }
+
+        function reset() {
+            document.getElementById("v1").value = "";
+            document.getElementById("v2").value = "";
+            document.getElementById("out").innerHTML = "Final Answer: <span>0</span>";
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Tech Experiments Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --surface: #ffffff;
+            --background: #f8fafc;
+            --text-main: #1e293b;
+            --text-secondary: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4rem 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .card {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+            border-color: var(--primary);
+        }
+
+        .card-number {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .card-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: auto;
+        }
+
+        .card-footer svg {
+            margin-left: 0.5rem;
+            transition: transform 0.2s;
+        }
+
+        .card:hover .card-footer svg {
+            transform: translateX(4px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Experiment Hub</h1>
+        <p>A collection of web development experiments & projects</p>
+    </header>
+
+    <main class="grid">
+        <!-- Experiment 1 -->
+        <a href="EXP-1/index.html" class="card">
+            <div>
+                <div class="card-number">Experiment 01</div>
+                <h2 class="card-title">Portfolio Design</h2>
+                <p class="card-desc">A personal portfolio website showcasing web development projects, skills, and
+                    contact information with a clean, modern aesthetic.</p>
+            </div>
+            <div class="card-footer">
+                View Project
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                    </path>
+                </svg>
+            </div>
+        </a>
+
+        <!-- Experiment 2 -->
+        <a href="EXP-2/index.html" class="card">
+            <div>
+                <div class="card-number">Experiment 02</div>
+                <h2 class="card-title">Lumière Fashion</h2>
+                <p class="card-desc">A premium e-commerce interface for a high-end fashion brand, featuring product
+                    grids, categories, and a sleek dark-themed design.</p>
+            </div>
+            <div class="card-footer">
+                View Project
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                    </path>
+                </svg>
+            </div>
+        </a>
+
+        <!-- Experiment 3 -->
+        <a href="EXP-3/index.html" class="card">
+            <div>
+                <div class="card-number">Experiment 03</div>
+                <h2 class="card-title">Portfolio Variation</h2>
+                <p class="card-desc">Alternative portfolio layout iteration, focusing on structural improvements and
+                    responsive design patterns.</p>
+            </div>
+            <div class="card-footer">
+                View Project
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                    </path>
+                </svg>
+            </div>
+        </a>
+
+        <!-- Experiment 4 -->
+        <a href="EXP-4/index.html" class="card">
+            <div>
+                <div class="card-number">Experiment 04</div>
+                <h2 class="card-title">Lumière E-Commerce</h2>
+                <p class="card-desc">Full-featured e-commerce template with shopping cart, product details, and an
+                    interactive shopping experience.</p>
+            </div>
+            <div class="card-footer">
+                View Project
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                    </path>
+                </svg>
+            </div>
+        </a>
+
+        <!-- Experiment 5 -->
+        <a href="EXP-5/calculator.html" class="card">
+            <div>
+                <div class="card-number">Experiment 05</div>
+                <h2 class="card-title">Modern Calculator V1</h2>
+                <p class="card-desc">A glassmorphic calculator with a clean UI and basic arithmetic operations,
+                    focused on minimalist design.</p>
+            </div>
+            <div class="card-footer">
+                View Project
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                    </path>
+                </svg>
+            </div>
+        </a>
+
+        <!-- Experiment 6 -->
+        <a href="EXP-6/calculator.html" class="card">
+            <div>
+                <div class="card-number">Experiment 06</div>
+                <h2 class="card-title">Modern Calculator V2</h2>
+                <p class="card-desc">An enhanced version of the glassmorphic calculator with optimized styling and
+                    refined layout patterns.</p>
+            </div>
+            <div class="card-footer">
+                View Project
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                    </path>
+                </svg>
+            </div>
+        </a>
+        <!--Experiment 7 -->
+        <a href="EXP-7/reg.html" class="card">
+            <div>
+                <div class="card-number">Experiment 07</div>
+                <h2 class="card-title">Registration Form</h2>
+                <p class="card-desc">A modern registration form with enhanced user experience and responsive design.</p>
+            </div>
+            <div class="card-footer">
+                View Project
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                    </path>
+                </svg>
+            </div>
+        </a>
+        <!--Experiment 8 -->
+        <a href="EXP-8/index.html" class="card">
+            <div>
+                <div class="card-number">Experiment 08</div>
+                <h2 class="card-title">Student Table</h2>
+                <p class="card-desc">A responsive table for displaying student information with sorting and filtering
+                    options.</p>
+            </div>
+            <div class="card-footer">
+                View Project
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                    </path>
+                </svg>
+            </div>
+        </a>
+        <!--Experiment 9 -->
+        <a href="EXP-9/index.html" class="card">
+            <div>
+                <div class="card-number">Experiment 09</div>
+                <h2 class="card-title">Electronics Marketplace</h2>
+                <p class="card-desc">A dynamic product inventory table with filtering and sorting capabilities.</p>
+            </div>
+            <div class="card-footer">
+                View Project
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                    </path>
+                </svg>
+            </div>
+        </a>
+        <!--Experiment 10 -->
+        <a href="EXP-10/contact.php" class="card">
+            <div>
+                <img src="EXP-10/Screenshot%202026-04-08%20130204.png" alt="PHP Contact Form Screenshot"
+                    style="width: 100%; border-radius: 8px; margin-bottom: 1rem; object-fit: cover; aspect-ratio: 16/9; border: 1px solid #e2e8f0;">
+                <div class="card-number">Experiment 10</div>
+                <h2 class="card-title">PHP Contact Form</h2>
+                <p class="card-desc">Server-side form handling and validation.</p>
+            </div>
+            <div class="card-footer">
+                View Project
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                    </path>
+                </svg>
+            </div>
+        </a>
+        <!--Experiment 11 -->
+        <a href="EXP-11/products.php" class="card">
+            <div>
+                <img src="EXP-11/Screenshot%202026-04-08%20130635.png" alt="PHP Product App Screenshot"
+                    style="width: 100%; border-radius: 8px; margin-bottom: 1rem; object-fit: cover; aspect-ratio: 16/9; border: 1px solid #e2e8f0;">
+                <img src="EXP-11/Screenshot%202026-04-08%20141835.png" alt="PHP Product App Screenshot"
+                    style="width: 100%; border-radius: 8px; margin-bottom: 1rem; object-fit: cover; aspect-ratio: 16/9; border: 1px solid #e2e8f0;">
+                <div class="card-number">Experiment 11</div>
+                <h2 class="card-title">PHP Product App</h2>
+                <p class="card-desc">A functional CRUD application with database integration.</p>
+            </div>
+            <div class="card-footer">
+                View Project
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                    </path>
+                </svg>
+            </div>
+        </a>
+        <!--Experiment 12 -->
+        <a href="EXP-12/index.php" class="card">
+            <div>
+                <img src="EXP-12/Screenshot%202026-04-08%20131655.png" alt="PHP API Backend Screenshot"
+                    style="width: 100%; border-radius: 8px; margin-bottom: 1rem; object-fit: cover; aspect-ratio: 16/9; border: 1px solid #e2e8f0;">
+                <div class="card-number">Experiment 12</div>
+                <h2 class="card-title">PHP API Backend</h2>
+                <p class="card-desc">A PHP-based API backend for processing and filtering data.</p>
+            </div>
+            <div class="card-footer">
+                View Project
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                    </path>
+                </svg>
+            </div>
+        </a>
+    </main>
+
+    <!-- Optional: Add a simple footer or credit -->
+    <footer style="margin-top: 4rem; color: var(--text-secondary); font-size: 0.875rem;">
+        <p>&copy; 2024 Experiment Hub</p>
+    </footer>
+
+</body>
+
+</html>

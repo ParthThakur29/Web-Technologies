@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | LUMIÈRE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container flex-between">
+            <a href="index.html" class="logo">LUMIÈRE.</a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.php">Shop All</a>
+                <a href="products.php">New Arrivals</a>
+                <a href="products.php">Collections</a>
+            </nav>
+            <div class="header-icons">
+                <a href="#" class="icon-btn">Search</a>
+                <a href="#" class="icon-btn">Account</a>
+                <a href="cart.html" class="icon-btn">Cart <span class="badge">2</span></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-4 mb-4">
+        <h1 class="section-title text-center">Your Cart</h1>
+
+        <table class="cart-table mt-2">
+            <thead>
+                <tr>
+                    <th width="50%">Product</th>
+                    <th width="15%">Price</th>
+                    <th width="15%">Quantity</th>
+                    <th width="15%">Total</th>
+                    <th width="5%"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="cart-product">
+                            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                                class="cart-img" alt="Product">
+                            <div>
+                                <h4 style="margin-bottom: 5px;">Classic Oversized Tee</h4>
+                                <p style="color: #666; font-size: 0.9rem;">Size: M / Color: Black</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>$45.00</td>
+                    <td><input type="number" class="qty-input" value="1" min="1"></td>
+                    <td>$45.00</td>
+                    <td><a href="#" style="color: #999;">&times;</a></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-product">
+                            <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                                class="cart-img" alt="Product">
+                            <div>
+                                <h4 style="margin-bottom: 5px;">Utility Cargo Pants</h4>
+                                <p style="color: #666; font-size: 0.9rem;">Size: 32 / Color: Olive</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>$89.00</td>
+                    <td><input type="number" class="qty-input" value="1" min="1"></td>
+                    <td>$89.00</td>
+                    <td><a href="#" style="color: #999;">&times;</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span>$134.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Shipping</span>
+                <span>Calculated at checkout</span>
+            </div>
+            <div class="summary-row">
+                <span>Tax</span>
+                <span>$10.72</span>
+            </div>
+            <div class="summary-row summary-total">
+                <span>Total</span>
+                <span>$144.72</span>
+            </div>
+            <button class="btn btn-primary btn-block mt-2">Proceed to Checkout</button>
+            <a href="products.php" class="btn btn-outline btn-block mt-1 text-center"
+                style="display:block; text-align:center;">Continue Shopping</a>
+        </div>
+
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="color:white; display:block; margin-bottom: 1rem;">LUMIÈRE.</a>
+                    <p style="color: #999; width: 80%;">Redefining modern fashion with minimalist aesthetics and premium
+                        quality.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <form onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Enter your email">
+                        <button class="btn btn-primary" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 Lumière Fashion. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
