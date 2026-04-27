@@ -1,90 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>All Webpages</title>
+    <title>Web Technologies Projects | Parth Thakur</title>
 
     <style>
-
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: linear-gradient(135deg, #e3f2fd, #ffffff);
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
-        .container {
-            max-width: 650px;
-            margin: 60px auto;
-            background: #ffffff;
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-        }
-
-        h1 {
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(120deg, #0f172a, #1e293b);
+            color: #e2e8f0;
             text-align: center;
-            color: #222;
-            margin-bottom: 25px;
+            padding: 50px 20px;
+        }
+
+        /* Heading */
+        h1 {
+            font-size: 42px;
             font-weight: 600;
+            color: #f8fafc;
+            margin-bottom: 10px;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
+        h2 {
+            color: #94a3b8;
+            font-weight: 400;
         }
 
-        li {
-            margin: 15px 0;
+        /* Container */
+        .container {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
         }
 
-        a {
-            display: block;
-            padding: 12px 15px;
-            background: #f7f9fc;
-            border-radius: 8px;
+        /* Card */
+        .card {
+            width: 260px;
+            padding: 25px;
+            border-radius: 16px;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: all 0.3s ease;
+        }
+
+        /* Smooth Hover */
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Title */
+        .card h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        /* Button */
+        .card a {
+            display: inline-block;
+            padding: 10px 18px;
+            background: #38bdf8;
+            color: #0f172a;
             text-decoration: none;
-            color: #333;
-            font-size: 17px;
-            transition: all 0.25s ease;
-            border-left: 4px solid #2196f3;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: 0.3s;
         }
 
-        a:hover {
-            background: #2196f3;
-            color: white;
-            transform: translateX(5px);
-            box-shadow: 0 5px 15px rgba(33,150,243,0.25);
+        .card a:hover {
+            background: #0ea5e9;
         }
 
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            color: #64748b;
+            font-size: 14px;
+        }
     </style>
 
 </head>
+
 <body>
+
+    <h1>Web Technologies Projects</h1>
+    <h2>Created by Parth Thakur</h2>
 
     <div class="container">
 
-        <h1>My Web Projects</h1>
+        <div class="card">
+            <h3>Personal Portfolio<br></h3>
+            <a href="portfolio-html/index.html">View Project</a>
+        </div>
 
-        <ul>
+     <div class="card">
+            <h3>Personal Portfolio<br></h3>
+            <a href="portfolio-html-css/index.html">View Project</a>
+        </div>
 
-            <li><a href="RESUME Without css/Resume.html">Resume Without CSS</a></li>
+        <div class="card">
+            <h3>E-Commerce Website<br></h3>
+            <a href="ecommerce-html/index.html">View Project</a>
+        </div>
 
-            <li><a href="RESUME/Resume.html">Resume With CSS</a></li>
+       
+        <div class="card">
+            <h3>E-Commerce Website<br></h3>
+            <a href="ecommerce-html-css/index.html">View Project</a>
+        </div>
 
-            <li><a href="Ecommerce Without css/home.html">Ecommerce Without CSS</a></li>
+        <div class="card">
+            <h3>Modern Calculator<br></h3>
+            <a href="Calculator-html-css-js/">View Project</a>
+        </div>
 
-            <li><a href="Ecommerce/home.html">Ecommerce With CSS</a></li>
+        <div class="card">
+            <h3>Sorting Dashboard<br></h3>
+            <a href="sorting-html/sorting.html">View Project</a>
+        </div>
 
-            <li><a href="Calculator/Calculator.html">Calculator Without CSS</a></li>
+        <div class="card">
+            <h3>PHP1<br></h3>
+            <a href="php1/index.html">View Project</a>
+        </div>
 
-            <li><a href="Calculator/Calculator2.html">Calculator With CSS</a></li>
+        <div class="card">
+            <h3>PHP2<br></h3>
+            <a href="php2/index.html">View Project</a>
+        </div>
 
-            <li><a href="student&market/index.html">Student & Market Smart Dashboard</a></li>
+        <div class="card">
+            <h3>PHP3<br></h3>
+            <a href="php3/index.html">View Project</a>
+        </div>
 
-        </ul>
+        <div class="card">
+            <h3>PHP4<br></h3>
+            <a href="php 4/index.html">View Project</a>
+        </div>
 
     </div>
+
+    <footer>
+        © 2026 Parth Thakur | Web Technologies Assignment
+    </footer>
 
 </body>
 </html>
